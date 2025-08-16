@@ -10,8 +10,19 @@ import tensorflow as tf
 
 # === Load model ===
 @st.cache_resource
+# def load_model():
+#     return tf.keras.models.load_model("resnet.h5")
+# import os, gdown, tensorflow as tf, streamlit as st
+
+FILE_ID = "1xPzhxtvcbuoSXuFqPTqD-UYOmp00gnn3"
+URL = f"https://drive.google.com/uc?id={FILE_ID}"
+LOCAL = "resnet.h5"
+
+@st.cache_resource
 def load_model():
-    return tf.keras.models.load_model("resnet.h5")
+    if not os.path.exists(LOCAL) or os.path.getsize(LOCAL) < 1024:
+        gdown.download(URL, LOCAL, quiet=False)
+    return tf.keras.models.load_model(LOCAL)
 
 model = load_model()
 
