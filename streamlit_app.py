@@ -30,8 +30,8 @@ model = load_model()
 
 # === Class labels (from your train_ds.class_indices) ===
 inv_class_names = {
-    0: "Than_Thar", 1: "Su_dad", 2: "nandar", 3: "mayzin",
-    4: "mom", 5: "pyonemoh", 6: "Lwin", 7: "Su"
+    0: "Su_dad", 1: "Lwin", 2: "mayzin", 3: "mom",
+    4: "pyonemoh", 5: "nandar", 6: "Su", 7: "Than_Thar"
 }
 
 # === Face Detection Functions (unchanged) ===
