@@ -7,6 +7,8 @@ import io
 import time
 from PIL import Image
 import tensorflow as tf
+import os
+import gdown
 
 # === Load model ===
 @st.cache_resource
