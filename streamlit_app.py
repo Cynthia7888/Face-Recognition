@@ -141,4 +141,4 @@ elif input_option == "Capture Image":
         st.image(result_img, caption="Detected Faces")
         st.write(f"Detected {len(preds)} face(s)")
         for i, label in enumerate(preds):
-            st.write(f"Face {i+1}: {label}")
+            st.write(f"Face {i}: {label}")
