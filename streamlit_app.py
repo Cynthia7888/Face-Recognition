@@ -11,7 +11,7 @@ import os
 import gdown
 
 # === Load model ===
-@st.cache_resource
+# @st.cache_resource
 # def load_model():
 #     return tf.keras.models.load_model("resnet.h5")
 # import os, gdown, tensorflow as tf, streamlit as st
